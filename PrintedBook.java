@@ -1,0 +1,17 @@
+public class PrintedBook extends Title {
+    // extends da PritedBook arver fra Title.
+
+    private int pages;
+
+    public PrintedBook(String title, String literatureType, int copies, int pages) {
+
+        super(title, literatureType, copies);
+        this.pages = pages;
+    }
+
+    @Override
+    public double calculatePoints() {
+        return pages * convertLiteratureType() * copies;
+
+    }
+}
